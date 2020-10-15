@@ -2,14 +2,14 @@
  * @Author: Vhen
  * @Date: 2020-10-13 09:56:52
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-14 11:47:54
+ * @LastEditTime: 2020-10-15 12:24:31
  * @Description:
 -->
 <template>
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
       <!-- <keep-alive :include="cachedViews"> -->
-        <router-view :key="key" />
+      <router-view :key="key" />
       <!-- </keep-alive> -->
     </transition>
   </section>
@@ -24,7 +24,7 @@ export default {
   computed: {
     cachedViews() {},
     key() {
-      return this.$route.path
+      return this.$route.path;
     },
   },
   components: {},
@@ -40,6 +40,9 @@ export default {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+.fixed-header + .app-main {
+  padding-top: 50px;
 }
 </style>
 

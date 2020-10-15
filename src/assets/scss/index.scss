@@ -1,9 +1,13 @@
 @import './reset.scss';
-@import './mixin.scss';
 @import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
 @import './sidebar.scss';
 
 
+.container{
+  padding: 20px;
+}
 
 a:focus,
 a:active {

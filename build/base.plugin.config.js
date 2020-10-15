@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-09 14:54:55
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-14 12:17:37
+ * @LastEditTime: 2020-10-15 16:55:23
  * @Description: 基础插件
  */
 
@@ -15,6 +15,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin') // vue-loader 编译vue
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') //css分离
 const OptimizeCss = require('optimize-css-assets-webpack-plugin') //压缩css
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const EnvConfig = require('./env.config')
 const CUR_ENV = EnvConfig[process.env.NODE_ENV] // 全局环境变量
 module.exports = [
@@ -35,6 +36,11 @@ module.exports = [
       collapseWhitespace: true,
     },
   }),
+  // new CopyPlugin({
+  //   // patterns: [
+  //   //   { from: path.resolve(__dirname. '../static'), to: '/' },
+  //   // ],
+  // }),
   new OptimizeCss({
     cssProcessor: require('cssnano'), //引入cssnano配置压缩选项
     cssProcessorOptions: {

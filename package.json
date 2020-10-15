@@ -3,12 +3,17 @@
   "version": "1.0.3",
   "description": "通用的webpack模板",
   "main": "index.js",
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config=./build/webpack.config.js  --open  --hot",
     "build:dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=./build/webpack.config.js",
     "build:test": "cross-env NODE_ENV=test webpack --progress --hide-modules --config=./build/webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=./build/webpack.config.js",
     "i": "rm -rf node_modules&&cnpm i",
+    "new": "plop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "vhen",
@@ -31,6 +36,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
     "cross-env": "^7.0.2",
     "css-loader": "^4.3.0",
     "file-loader": "^6.1.0",
@@ -40,6 +46,7 @@
     "mini-css-extract-plugin": "^1.0.0",
     "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "plop": "^2.7.4",
     "postcss-loader": "^4.0.3",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.2",

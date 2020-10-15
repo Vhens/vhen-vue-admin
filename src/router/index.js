@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-10 13:54:28
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 11:02:40
+ * @LastEditTime: 2020-10-15 11:13:34
  * @Description: 路由
  */
 
@@ -31,7 +31,19 @@ export const constantRoutes = [
         path: 'index',
         name: 'Form',
         component: () => import('views/form'),
-        meta: { title: 'Form', icon: 'el-icon-picture-outline', }
+        meta: { title: '表单', icon: 'el-icon-edit-outline', }
+      }
+    ]
+  },
+  {
+    path: '/table',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Form',
+        component: () => import('views/table'),
+        meta: { title: '表格', icon: 'el-icon-s-grid', }
       }
     ]
   },
@@ -41,7 +53,7 @@ export const constantRoutes = [
     component: Layout,
     meta: {
       title: '菜单管理',
-      icon: 'el-icon-watermelon'
+      icon: 'el-icon-menu'
     },
     children: [
       {
@@ -79,7 +91,7 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
+        path: 'https://github.com/Vhens/vhen-vue-admin',
         meta: { title: 'github', icon: 'el-icon-link' }
       }
     ]

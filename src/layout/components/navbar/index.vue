@@ -2,17 +2,32 @@
  * @Author: Vhen
  * @Date: 2020-10-13 10:39:52
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 11:00:05
+ * @LastEditTime: 2020-10-15 13:02:50
  * @Description:
 -->
 <template>
   <section class="navbar">
-    <hamburger
-      :is-active="sidebar.opened"
-      class="hamburger-container"
-      @toggleClick="toggleSideBar"
-    />
-    <breadcrumb class="breadcrumb-container" />
+    <section class="item">
+      <hamburger
+        :is-active="sidebar.opened"
+        class="hamburger-container"
+        @toggleClick="toggleSideBar"
+      />
+      <breadcrumb class="breadcrumb-container" />
+    </section>
+    <section class="item">
+         <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+        <div class="avatar-wrapper">
+          <el-avatar size="small" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"></el-avatar>
+          <i class="el-icon-caret-bottom" />
+        </div>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>
+            <span style="display:block;">退出</span>
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+    </section>
   </section>
 </template>
 
@@ -40,11 +55,22 @@ export default {
 </script>
 <style lang='scss' scoped>
 .navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   height: 50px;
   overflow: hidden;
-  position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  .item{
+    flex: 1;
+    &:last-child{
+      text-align: right;
+      padding-right: 20px;
+    }
+  }
   .hamburger-container {
     line-height: 46px;
     height: 100%;
