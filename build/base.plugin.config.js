@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-09 14:54:55
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 16:55:23
+ * @LastEditTime: 2020-10-16 09:58:02
  * @Description: 基础插件
  */
 
@@ -87,6 +87,20 @@ module.exports = [
           variableName: 'Vuex ',
         },
       },
+      {
+        path: 'https://cdn.jsdelivr.net/npm/tinymce@5.5.1/tinymce.min.js',
+        external: {
+          packageName: 'tinymce',
+          variableName: 'tinymce',
+        },
+      },
+      // {
+      //   path: 'https://cdn.jsdelivr.net/npm/vue-i18n@8.22.0/dist/vue-i18n.common.min.js',
+      //   external: {
+      //     packageName: 'vue-i18n',
+      //     variableName: 'VueI18n',
+      //   },
+      // }
     ],
     publicPath: false,
   }),

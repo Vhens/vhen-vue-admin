@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-13 09:27:40
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-14 11:45:39
+ * @LastEditTime: 2020-10-16 10:28:55
  * @Description:
  */
 let sidebarStatus = sessionStorage.getItem("sidebarStatus");
@@ -17,7 +17,8 @@ const state = {
     opened: sidebarStatus ? !!+sidebarStatus : true,
     withoutAnimation: false
   },
-  device: "desktop" // 桌面
+  device: "desktop", // 桌面
+  language: 'zh'
 };
 
 const mutations = {
@@ -53,7 +54,8 @@ const actions = {
 };
 
 const getters = {
-  sidebar: state => state.sidebar
+  sidebar: state => state.sidebar,
+  language: state=> state.language
 };
 
 export default {

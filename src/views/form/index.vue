@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-14 12:35:37
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 16:59:02
+ * @LastEditTime: 2020-10-16 10:57:59
  * @Description:
 -->
 <template>
@@ -11,6 +11,9 @@
       <el-button style="margin-left: 10px" type="success"> 发布 </el-button>
       <el-button> 编辑 </el-button>
     </v-sticky>
+    <div class="tinymce-box">
+        <v-tinymce v-model="content"></v-tinymce>
+    </div>
   </div>
 </template>
 
@@ -19,6 +22,7 @@ export default {
   props: {},
   data() {
     return {
+      content: '112122'
     };
   },
   computed: {},
@@ -31,5 +35,9 @@ export default {
 <style lang='scss' scoped>
 .form {
   padding: -20px;
+}
+.tinymce-box{
+  width: 80%;
+  margin: 30px auto;
 }
 </style>
