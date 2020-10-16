@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-15 17:42:35
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-16 10:55:58
+ * @LastEditTime: 2020-10-16 16:29:32
  * @Description:
 -->
 <template>
@@ -88,7 +88,7 @@ export default {
     initTinymce() {
       const _this = this
       window.tinymce.init({
-        language_url: '/public/tinymce/langs/zh_CN.js',
+        language_url: 'https://dianpiao.oss-cn-shanghai.aliyuncs.com/static/tinymce/langs/zh_CN.js',
         selector: `#${this.tinymceId}`,
         language: this.languageTypeList[this.$store.getters['app/language']],
         height: this.height,

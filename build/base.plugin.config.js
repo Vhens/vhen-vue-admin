@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-09 14:54:55
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-16 09:58:02
+ * @LastEditTime: 2020-10-16 16:51:40
  * @Description: 基础插件
  */
 
@@ -21,6 +21,11 @@ const CUR_ENV = EnvConfig[process.env.NODE_ENV] // 全局环境变量
 module.exports = [
   new FriendlyErrorsWebpackPlugin(),
   new CleanWebpackPlugin(),
+  // new CopyPlugin({
+  //   patterns: [
+  //     { from: '/src/assets', to: '/dist/static' },
+  //   ],
+  // }),
   new webpack.DefinePlugin({
     CUR_ENV: JSON.stringify(CUR_ENV),
   }),
@@ -36,11 +41,6 @@ module.exports = [
       collapseWhitespace: true,
     },
   }),
-  // new CopyPlugin({
-  //   // patterns: [
-  //   //   { from: path.resolve(__dirname. '../static'), to: '/' },
-  //   // ],
-  // }),
   new OptimizeCss({
     cssProcessor: require('cssnano'), //引入cssnano配置压缩选项
     cssProcessorOptions: {
@@ -53,8 +53,8 @@ module.exports = [
   new VueLoaderPlugin(),
   new MiniCssExtractPlugin({
     // 类似 webpackOptions.output里面的配置 可以忽略
-    filename: 'css/[name].css',
-    chunkFilename: 'css/[id].css',
+    filename: 'static/css/[name].css',
+    chunkFilename: 'static/css/[id].css',
   }),
   new HtmlWebpackTagsPlugin({
     links: ['https://unpkg.com/element-ui/lib/theme-chalk/index.css'],

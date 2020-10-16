@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-09 15:04:16
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 09:40:34
+ * @LastEditTime: 2020-10-16 16:04:58
  * @Description: 处理项目中的不同类型的模块。
  */
 const path = require("path");
@@ -22,7 +22,7 @@ module.exports = {
     {
       test: /\.(sa|sc|le|c)ss$/,
       use: [
-        "vue-style-loader",
+        "style-loader",
         {
           loader: MiniCssExtractPlugin.loader,
           options: {
