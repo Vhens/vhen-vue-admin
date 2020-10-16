@@ -1,6 +1,6 @@
 {
   "name": "vhen-vue-admin-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "通用的webpack模板",
   "main": "index.js",
   "sideEffects": [
