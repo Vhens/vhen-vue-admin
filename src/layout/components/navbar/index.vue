@@ -2,7 +2,7 @@
  * @Author: Vhen
  * @Date: 2020-10-13 10:39:52
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 13:02:50
+ * @LastEditTime: 2020-10-16 13:40:39
  * @Description:
 -->
 <template>
@@ -23,7 +23,7 @@
         </div>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>
-            <span style="display:block;">退出</span>
+            <span style="display:block;" @click="logout">退出</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -48,6 +48,9 @@ export default {
     toggleSideBar() {
       this.$store.dispatch("app/toggleSideBar");
     },
+    logout(){
+      this.$router.replace('/login')
+    }
   },
   mounted() {},
   watch: {},

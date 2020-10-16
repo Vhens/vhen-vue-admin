@@ -2,13 +2,18 @@
  * @Author: Vhen
  * @Date: 2020-10-10 13:54:28
  * @LastEditors: Vhen
- * @LastEditTime: 2020-10-15 11:13:34
+ * @LastEditTime: 2020-10-16 12:44:02
  * @Description: 路由
  */
 
 import Layout from 'layout'
 
 export const constantRoutes = [
+  {
+    path: '/login',
+    component: () => import('views/login'),
+    hidden: true
+  },
   {
     path: '/',
     component: Layout,
