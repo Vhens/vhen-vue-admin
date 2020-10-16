@@ -1,6 +1,6 @@
 {
   "name": "vhen-webpack-template",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "通用的webpack模板",
   "main": "index.js",
   "sideEffects": [
